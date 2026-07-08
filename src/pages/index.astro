@@ -3,7 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const title = "My Astro Blog";
 const description = "The perfect starter for your perfect blog.";
-const permalink = Astro.site?.href || "http://localhost:3000";
+const base = import.meta.env.BASE_URL;
+const permalink = new URL(base, Astro.site || "http://localhost:3000").href;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>
@@ -22,13 +23,13 @@ const permalink = Astro.site?.href || "http://localhost:3000";
         <div class="hero-image-container">
             <picture>
                 <source
-                    srcset="/assets/home-illustration.webp"
+                    srcset={`${base}assets/home-illustration.webp`}
                     media="(min-width: 600px)"
                 />
                 <img
                     class="hero-image"
                     alt="Illustration of person reading a book"
-                    src="/assets/home-illustration-small.webp"
+                    src={`${base}assets/home-illustration-small.webp`}
                     width="550"
                     height="466"
                 />
