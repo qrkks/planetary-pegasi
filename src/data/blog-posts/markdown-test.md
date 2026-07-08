@@ -7,6 +7,14 @@ description: A sample page with the most common elements of an article, includin
 
 ![Illustration of woman using a computer receiving likes](/assets/blog/casual-life-3d-likes.webp)
 
+<img 
+  src="/assets/blog/casual-life-3d-likes.webp" 
+  alt="Illustration of woman using a computer receiving likes"
+  style="float: left; margin-right: 1rem; width: 300px"
+/>
+
+---
+
 This page is an adapted version of [markdown-test-page](https://github.com/fullpipe/markdown-test-page). It should give you an idea of how different elements are styled on this template.
 
 ## <a name="top"></a> Table of Contents
@@ -172,10 +180,10 @@ Ex amet id ex aliquip id do laborum excepteur exercitation elit sint commodo occ
 
 ```html
 <script>
-  let count = 0
+  let count = 0;
 
   function handleClick() {
-    count += 1
+    count += 1;
   }
 </script>
 
