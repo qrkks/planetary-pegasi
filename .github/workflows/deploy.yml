@@ -1,0 +1,22 @@
+name: Deploy Astro to Pages
+on:
+  push:
+    branches: [main] # 你的主分支，master 则替换
+  workflow_dispatch: # 支持网页手动触发
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      # Astro 官方一键构建 Action，自动识别 npm/pnpm/yarn
+      - uses: withastro/action@v6
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - uses: actions/deploy-pages@v4
