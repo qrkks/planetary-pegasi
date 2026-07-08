@@ -129,6 +129,26 @@ img {
   height: auto;
 }
 
+.content img[alt="Illustration floated left"] {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  width: 300px;
+}
+
+.content img[alt="Illustration floated left, full width"] {
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+
+@media (max-width: 600px) {
+  .content img[alt="Illustration floated left"],
+  .content img[alt="Illustration floated left, full width"] {
+    float: none;
+    margin: 1rem 0;
+    width: 100%;
+  }
+}
+
 hr {
   padding: 0;
   border: 0;

@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import aboutIllustration from '../assets/about-illustration.webp';
 
 const title = 'About';
 const description = 'About your blog.';
@@ -11,7 +13,7 @@ const permalink = new URL(`${base}about/`, Astro.site).href;
   <div class="container">
     <h1>About</h1>
     <figure class="about-image">
-      <img src={`${base}assets/about-illustration.webp`} alt="Illustration of a notebook" width="330">
+      <Image src={aboutIllustration} alt="Illustration of a notebook" width={330} />
       <figcaption>
         Illustration by
         <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
