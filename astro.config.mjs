@@ -7,7 +7,7 @@ import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://qrkks.github.io",
+  site: "https://qrkks.github.io/planetary-pegasi",
   trailingSlash: "always",
   integrations: [mdx(), svelte()],
   markdown: {
